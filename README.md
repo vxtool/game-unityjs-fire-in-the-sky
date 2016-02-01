@@ -1,7 +1,7 @@
 # Cat a lot
 
-[![licence mit](https://img.shields.io/badge/license-MIT-blue.svg)](http://hemersonvianna.mit-license.org/)
-[![issues](https://img.shields.io/github/issues/game-solutions/game-unityjs-cat-a-lot.svg)](https://github.com/game-solutions/game-unityjs-cat-a-lot/issues)
+[![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
+[![issues](https://img.shields.io/github/issues/game-solutions/game-unityjs-cat-a-lot.svg?style=flat-square)](https://github.com/game-solutions/game-unityjs-cat-a-lot/issues)
 
 
 ## Contributing

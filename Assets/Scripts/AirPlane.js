@@ -2,6 +2,11 @@
 
 public var range : float;
 
+//var rend : Renderer;
+
+function Start () {
+	//rend = gameObject.GetComponent.<Renderer>();
+}
 
 function Update () {
     var h : float = Input.GetAxis("Horizontal");
@@ -10,5 +15,8 @@ function Update () {
     var yPos : float = v * range;
     var xCurrent : float = transform.position.x + xPos;
     var yCurrent : float = transform.position.y + yPos;
-    transform.position = new Vector3(xCurrent, yCurrent, 0);
+
+    //if (rend.isVisible) {
+    	transform.position = new Vector3(xCurrent, yCurrent, 0);
+    //}
 }

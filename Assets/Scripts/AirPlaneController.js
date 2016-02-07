@@ -1,23 +1,33 @@
-﻿#pragma strict
+﻿import UnityEngine.Component;
+
+#pragma strict
 
 public var range 				: float;
 public var AirplaneRigidbody	: Rigidbody2D;
 
-//var rend : Renderer;
+private var h 			: float;
+private var v 			: float;
+private var xPos 		: float;
+private var yPos 		: float;
+private var xCurrent 	: float;
+private var yCurrent 	: float;
+
+public var rend : Renderer;
 
 function Start () {
-	//rend = gameObject.GetComponent.<Renderer>();
+	rend = GetComponent.<Renderer>();
 }
 
 function Update () {
-    var h : float = Input.GetAxis("Horizontal");
-    var v : float = Input.GetAxis("Vertical");
-    var xPos : float = h * range;
-    var yPos : float = v * range;
-    var xCurrent : float = transform.position.x + xPos;
-    var yCurrent : float = transform.position.y + yPos;
+    h 		= Input.GetAxis("Horizontal");
+    v 		= Input.GetAxis("Vertical");
+    xPos 	= h * range;
+    yPos 	= v * range;
 
-    //if (rend.isVisible) {
-    	transform.position = new Vector3(xCurrent, yCurrent, 0);
-    //}
+    xCurrent = transform.position.x + xPos;
+    yCurrent = transform.position.y + yPos;
+
+   // if(rend.isVisible){
+		transform.position = new Vector3(xCurrent, yCurrent, 0);
+	//}
 }

@@ -1,4 +1,5 @@
 ﻿import UnityEngine.Component;
+import UnityEngine.Screen;
 
 #pragma strict
 
@@ -12,10 +13,9 @@ private var yPos 		: float;
 private var xCurrent 	: float;
 private var yCurrent 	: float;
 
-public var rend : Renderer;
 
 function Start () {
-	rend = GetComponent.<Renderer>();
+
 }
 
 function Update () {
@@ -27,7 +27,7 @@ function Update () {
     xCurrent = transform.position.x + xPos;
     yCurrent = transform.position.y + yPos;
 
-   // if(rend.isVisible){
+    if( (xCurrent >= -14.9 && xCurrent <= 14.8) && (yCurrent >= -7 && yCurrent <= 9) ){
 		transform.position = new Vector3(xCurrent, yCurrent, 0);
-	//}
+	}
 }

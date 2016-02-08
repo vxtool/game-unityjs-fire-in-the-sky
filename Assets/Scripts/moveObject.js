@@ -2,7 +2,7 @@
 
 #pragma strict
 
-public var speed 	: float;
+var speed 	: float;
 
 private var y 		: float;
 private var rend 	: Renderer;

@@ -3,8 +3,8 @@ import UnityEngine.Screen;
 
 #pragma strict
 
-public var range 				: float;
-public var AirplaneRigidbody	: Rigidbody2D;
+var range 				: float;
+var AirplaneRigidbody	: Rigidbody2D;
 
 private var h 			: float;
 private var v 			: float;

@@ -16,7 +16,7 @@ function Update () {
 	y += speed;
 	transform.position = new Vector3(transform.position.x, y, transform.position.z);
 
-	if(!rend.isVisible){
+	if(rend && !rend.isVisible){
 		Destroy (transform.gameObject);
 	}
 }

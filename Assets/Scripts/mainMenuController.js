@@ -2,25 +2,25 @@
 import UnityEngine.Screen;
 #pragma strict
 
-function Start () {
+var customSkin : GUISkin;
 
-}
-
-function Update () {
-
-}
+private var wButton = 200;
+private var hButton = 40;
+private var xElement =  (width-wButton)/2;
+private var yElement = 400;
 
 function OnGUI () {
-	var wButton = 200;
-	var hButton = 60;
-	var xElement =  (width-wButton)/2;
-	var yElement = 400;
+	GUI.skin = customSkin;
 
     if (GUI.Button (Rect (xElement, yElement, wButton, hButton), "Play")) {
-        SceneManager.LoadScene('game');
+        SceneManager.LoadScene('Game');
     }
 
-    if(GUI.Button(new Rect(xElement, yElement + hButton + 10, wButton, hButton), "Tutorial")) {
-        SceneManager.LoadScene('tutorial');
+    if(GUI.Button(new Rect(xElement, yElement + hButton + 20, wButton, hButton), "Tutorial")) {
+        SceneManager.LoadScene('Tutorial');
+    }
+
+    if(GUI.Button(new Rect(xElement, yElement + hButton + 80, wButton, hButton), "Credits")) {
+        SceneManager.LoadScene('Credits');
     }
 }

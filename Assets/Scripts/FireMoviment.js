@@ -20,11 +20,3 @@ function Update () {
 		Destroy (transform.gameObject);
 	}
 }
-
-function OnBecameInvisible () {
-	Debug.Log("invisible");
-}
-
-function OnBecameVisible() {
-	Debug.Log("visible");
-}

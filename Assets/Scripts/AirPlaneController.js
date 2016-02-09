@@ -1,4 +1,4 @@
-﻿import UnityEngine.Component;
+import UnityEngine.Component;
 import UnityEngine.Screen;
 import UnityEngine.Object;
 
@@ -33,15 +33,15 @@ function Update () {
 }
 
 function FixedUpdate () {
-    h 		= Input.GetAxis("Horizontal");
-    v 		= Input.GetAxis("Vertical");
-    xPos 	= h * range;
-    yPos 	= v * range;
+  h 		= Input.GetAxis("Horizontal");
+  v 		= Input.GetAxis("Vertical");
+  xPos 	= h * range;
+  yPos 	= v * range;
 
-    xCurrent = transform.position.x + xPos;
-    yCurrent = transform.position.y + yPos;
+  xCurrent = transform.position.x + xPos;
+  yCurrent = transform.position.y + yPos;
 
-    if( (xCurrent >= -14.9 && xCurrent <= 14.8) && (yCurrent >= -7 && yCurrent <= 9) ){
+  if( (xCurrent >= -14.9 && xCurrent <= 14.8) && (yCurrent >= -7 && yCurrent <= 9) ){
 		transform.position = new Vector3(xCurrent, yCurrent, 0);
 	}
 }

@@ -1,4 +1,4 @@
-﻿import UnityEngine.SceneManagement;
+import UnityEngine.SceneManagement;
 import UnityEngine.Screen;
 #pragma strict
 
@@ -12,15 +12,16 @@ private var yElement = 400;
 function OnGUI () {
 	GUI.skin = customSkin;
 
-    if (GUI.Button (Rect (xElement, yElement, wButton, hButton), "Play")) {
-        SceneManager.LoadScene('Game');
-    }
+  if (GUI.Button (Rect (xElement, yElement, wButton, hButton), "Play")) {
+    SceneManager.LoadScene('Game');
+  }
 
-    if(GUI.Button(new Rect(xElement, yElement + hButton + 20, wButton, hButton), "Tutorial")) {
-        SceneManager.LoadScene('Tutorial');
-    }
+  if(GUI.Button(new Rect(xElement, yElement + hButton + 20, wButton, hButton), "Tutorial")) {
+    SceneManager.LoadScene('Tutorial');
+  }
 
-    if(GUI.Button(new Rect(xElement, yElement + hButton + 80, wButton, hButton), "Credits")) {
-        SceneManager.LoadScene('Credits');
-    }
+  if(GUI.Button(new Rect(xElement, yElement + hButton + 80, wButton, hButton), "Credits")) {
+    SceneManager.LoadScene('Credits');
+  }
+
 }

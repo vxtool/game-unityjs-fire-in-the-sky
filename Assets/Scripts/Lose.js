@@ -1,18 +1,24 @@
-﻿import UnityEngine.SceneManagement;
+import UnityEngine.SceneManagement;
 import UnityEngine.Screen;
 
 #pragma strict
 
-//Public Variables
-var loseQuote : String = "Você perdeu!!";
+var customSkin : GUISkin;
+
+private var wButton = 280;
+private var hButton = 40;
+private var xElement =  (width-wButton)/2;
+private var yElement = 400;
 
 function OnGUI () {
-	GUI.BeginGroup (Rect(width / 2 - 100, height / 2 - 100, 200, 100));
-	GUI.Box (Rect(0,0,200,100), loseQuote);
+  GUI.skin = customSkin;
 
-	if(GUI.Button(Rect(60,60,80,30), "Menu")) {
-		SceneManager.LoadScene('MainMenu');
+  if(GUI.Button(Rect(xElement, yElement, wButton, hButton), "Retry")) {
+    SceneManager.LoadScene('Game');
+  }
+
+	if(GUI.Button(Rect(xElement, yElement + hButton + 20, wButton, hButton), "Exit to Menu")) {
+    SceneManager.LoadScene('MainMenu');
 	}
 
-	GUI.EndGroup();
 }

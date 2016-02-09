@@ -1,4 +1,5 @@
 import UnityEngine.Component;
+import UnityEngine.SceneManagement;
 import UnityEngine.Screen;
 import UnityEngine.Object;
 
@@ -44,4 +45,9 @@ function FixedUpdate () {
   if( (xCurrent >= -14.9 && xCurrent <= 14.8) && (yCurrent >= -7 && yCurrent <= 9) ){
 		transform.position = new Vector3(xCurrent, yCurrent, 0);
 	}
+}
+
+
+function OnTriggerEnter2D() {
+  SceneManager.LoadScene('Lose');
 }

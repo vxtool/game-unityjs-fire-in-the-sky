@@ -38,13 +38,20 @@ function OnBecameVisible() {
 }
 
 function OnTriggerEnter2D(other : Collider2D){
+  Debug.Log(other.tag);
   if(other.tag == "Player"){
     transform.position.y = startY;
     transform.position.x = Random.Range(-13,13);
+    AirPlaneController.life -= 1;
+
+    if(AirPlaneController.life == 0){
+      SceneManager.LoadScene('Lose');
+    }
   }
 
   if(other.tag == "Shot"){
     transform.position.y = startY;
     transform.position.x = Random.Range(-13,13);
+    AirPlaneController.points += 5;
   }
 }

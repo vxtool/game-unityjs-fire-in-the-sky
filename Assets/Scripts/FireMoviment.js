@@ -22,7 +22,6 @@ function Update () {
 }
 
 function OnTriggerEnter2D(other : Collider2D){
-  Debug.Log(other.tag);
   if(other.tag == "Enemy"){
     Destroy (transform.gameObject);
   }

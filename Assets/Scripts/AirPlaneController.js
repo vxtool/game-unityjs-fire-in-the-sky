@@ -5,6 +5,9 @@ import UnityEngine.Object;
 
 #pragma strict
 
+static var life   : int;
+static var points : int;
+
 var range 				: float;
 var AirplaneRigidbody	: Rigidbody2D;
 
@@ -23,7 +26,8 @@ private var yCurrent 	: float;
 
 
 function Start () {
-
+  life = 3;
+  points = 0;
 }
 
 function Update () {
@@ -48,6 +52,10 @@ function FixedUpdate () {
 	}
 }
 
+function OnGUI () {
+  GUI.Label (Rect (10, 10, 100, 20), "Vida: "+life);
+  GUI.Label (Rect (10, 30, 100, 20), "Pontos: "+points);
+}
 
 // function OnTriggerEnter2D() {
 //   SceneManager.LoadScene('Lose');

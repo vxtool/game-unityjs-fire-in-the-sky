@@ -1,4 +1,4 @@
-﻿import UnityEngine.Component;
+import UnityEngine.Component;
 
 #pragma strict
 
@@ -19,4 +19,11 @@ function Update () {
 	if(rend && !rend.isVisible){
 		Destroy (transform.gameObject);
 	}
+}
+
+function OnTriggerEnter2D(other : Collider2D){
+  Debug.Log(other.tag);
+  if(other.tag == "Enemy"){
+    Destroy (transform.gameObject);
+  }
 }

@@ -37,13 +37,13 @@ function OnBecameVisible() {
 	//Debug.Log("visible");
 }
 
-function OnTriggerEnter(other:Collider){
-  if(other.CompareTag("Player")){
+function OnTriggerEnter2D(other : Collider2D){
+  if(other.tag == "Player"){
     transform.position.y = startY;
     transform.position.x = Random.Range(-13,13);
   }
 
-  if(other.CompareTag("Shot")){
+  if(other.tag == "Shot"){
     transform.position.y = startY;
     transform.position.x = Random.Range(-13,13);
   }

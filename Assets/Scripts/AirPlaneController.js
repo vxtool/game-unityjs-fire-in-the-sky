@@ -29,7 +29,8 @@ function Start () {
 function Update () {
 	if(Input.GetButton("Fire") && Time.time > nextFire){
 		nextFire = Time.time + fireRate;
-		Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+		var shotTag = Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+    shotTag.gameObject.tag = "Shot";
 	}
 }
 
@@ -48,6 +49,6 @@ function FixedUpdate () {
 }
 
 
-function OnTriggerEnter2D() {
-  SceneManager.LoadScene('Lose');
-}
+// function OnTriggerEnter2D() {
+//   SceneManager.LoadScene('Lose');
+// }

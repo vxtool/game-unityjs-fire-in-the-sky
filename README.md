@@ -1,7 +1,7 @@
 # Fire in the sky
 
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
-[![issues](https://img.shields.io/github/issues/game-solutions/game-unityjs-cat-a-lot.svg?style=flat-square)](https://github.com/game-solutions/game-unityjs-cat-a-lot/issues)
+[![issues](https://img.shields.io/github/issues/descco-tools/game-unityjs-fire-in-the-sky.svg?style=flat-square)](https://github.com/descco-tools/game-unityjs-fire-in-the-sky/issues)
 
 
 ## Contributing
@@ -14,7 +14,7 @@
 
 ## Log
 
-Check [Releases](https://github.com/game-solutions/game-unityjs-cat-a-lot/releases) for detailed changelog.
+Check [Releases](https://github.com/descco-tools/game-unityjs-fire-in-the-sky/releases) for detailed changelog.
 
 ## License
 
